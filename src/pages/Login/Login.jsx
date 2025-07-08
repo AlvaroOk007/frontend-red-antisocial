@@ -34,7 +34,7 @@ function Login() {
       return;
     }
 
-    const userExists = users.users.find(
+    const userExists = users.find(
       (user) => user.nickName.toLowerCase() === nickName.toLowerCase()
     );
 
