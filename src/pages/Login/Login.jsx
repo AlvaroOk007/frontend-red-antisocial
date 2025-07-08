@@ -14,12 +14,13 @@ function Login() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const { users } = useGetUsers();
+  console.log(users);
   const { login } = useContext(AuthContext);
 
   const PASSWORD_PREDETERMINADA = '123456';
 
-  function notifyError() {
-    toast.error('Credenciales incorrectas');
+  function notifyError(message) {
+    toast.error(message);
   }
 
   function notifyOk() {
@@ -27,16 +28,23 @@ function Login() {
   }
 
   function handleLogin() {
-    if (!nickName || !password) {
-      toast.error('Por favor, completa todos los campos');
+    // Verifico que No ingrese campos vacios
+    if (!nickName.trim() || !password.trim()) {
+      notifyError('Por favor, completa todos los campos');
       return;
     }
 
-    const userExists = users.find(
+    const userExists = users.users.find(
       (user) => user.nickName.toLowerCase() === nickName.toLowerCase()
     );
 
-    if (userExists && password === PASSWORD_PREDETERMINADA) {
+    // Verifico que usuario exista
+    if (!userExists) {
+      notifyError('No existe el usuario');
+      return
+    }
+
+    if (password === PASSWORD_PREDETERMINADA) {
       notifyOk();
       login(userExists);
       console.log(
@@ -47,7 +55,7 @@ function Login() {
         navigate('/home');
       }, 2000);
     } else {
-      notifyError();
+      notifyError('Contraseña incorrecta');
     }
   }
 
@@ -92,7 +100,7 @@ function Login() {
               </label>
             </div>
 
-            <div >
+            <div>
               <button
                 data-mdb-ripple-init
                 type='button'
@@ -104,7 +112,9 @@ function Login() {
             </div>
 
             <div className='text-center'>
-              <p style={{textDecoration: 'underline',cursor:'pointer'}}>¿Olvidaste tu contraseña?</p>
+              <p style={{ textDecoration: 'underline', cursor: 'pointer' }}>
+                ¿Olvidaste tu contraseña?
+              </p>
             </div>
           </div>
         </form>

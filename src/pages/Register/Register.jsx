@@ -41,7 +41,7 @@ function Register() {
       validarEmail(email)
     ) {
       try {
-        let respuesta = await fetch('http://localhost:3001/users', {
+        let respuesta = await fetch('http://localhost:3000/users', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
