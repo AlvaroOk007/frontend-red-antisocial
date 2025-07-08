@@ -1,0 +1,126 @@
+/* Contenedor externo */
+.new-post-wrapper {
+  background-color: rgb(53, 53, 53);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* Card del formulario */
+.new-post-card {
+  background-color: #cdd7d7;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Título */
+.post-title {
+  color: #1e1e1e;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Secciones */
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #333;
+}
+
+/* Textareas */
+.custom-input {
+  background-color: #f8f8f8;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 0.75rem;
+  width: 100%;
+  resize: none;
+  min-height: 80px;
+  font-size: 0.95rem;
+}
+
+.custom-input:focus{
+    outline: none;           
+    border: 2px solid #669c9c9a;  
+    box-shadow: none;
+}
+
+/* Etiquetas */
+.tags-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-checkbox {
+  position: relative;
+}
+
+.tag-checkbox input {
+  display: none;
+}
+
+.tag-checkbox label {
+  background-color: #e4e4e4;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid #bbb;
+  font-weight: bold;
+}
+
+.tag-checkbox input:checked + label {
+  background-color: #588b8b;
+  color: #ffffff;
+  font-weight: bold;
+  border: 1px solid #669c9c7a;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.116);
+  border-radius: 200px;
+}
+
+/* Botón */
+.publish-btn {
+  background-color:#588b8b;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  width: 100%;
+  transition: 0.3s ease;
+  color: #f8f8f8;
+}
+
+.publish-btn:hover {
+  background-color: #588b8b8c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .new-post-card {
+    padding: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .publish-btn {
+    font-size: 0.95rem;
+  }
+}

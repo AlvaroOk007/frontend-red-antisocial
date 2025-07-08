@@ -1,0 +1,41 @@
+/* Centrado del modal personalizado */
+.container-modal-custom .modal-content {
+  background-color: #c7d3d3;
+  color: #011d1d;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.container-modal-custom .modal-title{
+  font-size: calc(12px + 0.7vw);
+}
+/* Encabezado */
+.container-modal-custom .modal-header {
+  border-bottom: 1px solid #011d1d;
+  border: none;
+}
+
+
+/* Botones */
+.container-modal-custom .btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.container-modal-custom .btn-primary {
+  background-color: #588b8b; /* rojo suave */
+  border: none;
+}
+
+.container-modal-custom .btn-primary:hover {
+  background-color: #4b7979;
+}
+
+.container-modal-custom .btn-secondary {
+  background-color: #588b8b; /* celeste */
+  border: none;
+}
+
+.container-modal-custom .btn-secondary:hover {
+  background-color: #255353;
+}

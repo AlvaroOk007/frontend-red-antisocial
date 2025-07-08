@@ -1,0 +1,86 @@
+.form-comment{
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  transition: all ease .10s;
+  & input{
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    width: 100%;
+    height: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 238, 255, 0.048);
+    border-radius: 10px;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.btns-comment{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  height: 0;
+  transition: all ease .10s;
+  & button{
+    padding: 6px 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: calc(13px + 0.06vw);
+    color: white;
+    &:hover{
+      background-color:#487070 ;
+    }
+    &:active{
+      transform: scale(0.8);
+    }
+  }
+}
+
+.cancelar{
+  background-color:#588b8b;
+}
+
+.comentar{
+  background-color: #588b8b;
+}
+.block{
+  padding: 0 1rem 1rem 1rem;
+  height: auto; 
+  transition: all ease .10s;
+  & input{
+    height: auto;
+  }
+  & .btns-comment{
+    height: auto;
+  }
+}
+
+.text-comment-send{
+  color: rgb(84, 133, 84);
+  font-size: calc(12px + 0.05vw);
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.color-red{
+  color: rgb(255, 81, 81);
+}
+
+.custom-spinner-send-comment{
+  padding: 0;
+  margin: 0 !important;
+  height: 1rem;
+  width: 1rem;
+}

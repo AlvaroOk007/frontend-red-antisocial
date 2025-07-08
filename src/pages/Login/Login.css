@@ -1,0 +1,96 @@
+/*  Contenedor principal */
+.conteiner-main-login{
+  box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.151);
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  margin: 5vh 5vw;
+  background-color: #151c1e;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Contendor de texto de bienvenida */
+.conteiner-message-welcome{
+  background-color: #588b8b;
+  border-radius: 0 10px 10px 0;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title-message-welcome{
+  font-size: calc(15px + 1.5vw);
+  color: white;
+}
+.text-message-welcome{
+  color: white;
+  font-size: calc(12px + 0.3vw);
+}
+.button-message-welcome{
+  border: none;
+  box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.048);
+  padding: 1rem 2rem;
+  border-radius: 200px;
+  font-size: calc(12px + 0.3vw);
+  transition: all ease .3s;
+  &:hover{
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.137);
+    background-color: rgb(233, 233, 233);
+    transform: scale(1.04);
+  }
+}
+/* Contendor de Formulario*/
+.container-form-custom{
+  width: 55vw ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  background-color: #151c1e;
+}
+.container-form-custom form{
+  color: white;
+  width: auto;
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.336);
+}
+.btn-custom{
+  background-color: #588b8b;
+  color: white;
+  &:hover{
+    background-color: #487070
+  }
+}
+.message-wel-input:focus{
+  outline: 2px solid #588b8b;
+  box-shadow: none;
+  border: none;
+}
+@media (max-width:740px){
+  .conteiner-main-login{
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0;
+  }
+  .conteiner-message-welcome{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+  .container-form-custom{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .message-wel-input{
+    width: 100%;
+  }
+}
+

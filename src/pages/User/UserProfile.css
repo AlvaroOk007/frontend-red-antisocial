@@ -1,0 +1,38 @@
+.container-main {
+    padding-bottom: 2rem;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-profile{
+    color:aliceblue;
+}
+
+.container-text{
+    width: 100%;
+    text-align: left;
+    padding: 0px 2rem;
+}
+
+/*css de carga*/
+.cargando {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sin-posteos{
+    color: aliceblue;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 1rem;
+}

@@ -1,0 +1,56 @@
+.container-aside-article {
+  background-color: rgba(219, 254, 255, 0.062);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.7rem;
+  border-radius: 20px;
+  transition: all ease 0.2s;
+  gap: 2rem;
+  &:hover {
+    transform: scale(1.01);
+    background-color: rgba(87, 255, 255, 0.219);
+    & .card-aside-button {
+      background-color: rgba(0, 0, 0, 0.178);
+      color: rgb(255, 255, 255);
+      &:hover {
+        color: aqua;
+      }
+    }
+  }
+}
+/* Estilos de parte izquierda */
+.card-aside-left {
+  display: flex;
+  gap: 0.5rem;
+}
+.card-aside_header {
+  display: flex;
+  & img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 50%;
+  }
+}
+.card-aside-rigth {
+  display: flex;
+  flex-direction: column;
+}
+.card-nick {
+  font-size: calc(12px + 0.2vw);
+  font-weight: 600;
+  color: white;
+}
+.card-email {
+  color: rgb(158, 158, 158);
+}
+
+.card-aside-button {
+  padding: 0.5rem;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(0, 255, 255, 0.199);
+  color: rgb(233, 233, 233);
+}

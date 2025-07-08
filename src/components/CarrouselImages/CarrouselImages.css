@@ -1,0 +1,57 @@
+.container-carrousel-images{
+  height: 30rem;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    & .custom-btn{
+      display: block;
+    }
+    & .cant-imgs{
+      display: block;
+    }
+  }
+}
+.img-carrousel{
+  height: 30rem;
+}
+/* Botones left rigth */
+.custom-btn{
+  display: none;
+  border-radius: 10px;
+  background-color: rgba(68, 68, 68, 0.5);
+  color: rgba(255, 255, 255, 0.932);
+  transition: all ease .2s;
+  cursor: pointer;
+  &:hover{
+    background-color: rgba(56, 56, 56, 0.877);
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+  }
+}
+.btn-left{
+  position: absolute;
+  left: 0;
+  margin-left: 10px;
+}
+.btn-rigth{
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+/* Contador de imagenes */
+.cant-imgs{
+  display: none;
+  background-color: rgba(255, 255, 255, 0.342);
+  position: absolute;
+  color: white;
+  padding: 0.3rem;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  bottom: 0;
+  z-index: 99;
+}
