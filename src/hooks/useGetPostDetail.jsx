@@ -9,10 +9,10 @@ export const useGetPostDetail = (id) => {
   useEffect(() => {
     const fetchPostData = async () => {
       try {
-        const resPost = await fetch(`http://localhost:3001/posts/${id}`);
+        const resPost = await fetch(`http://localhost:3000/posts/${id}`);
         const postData = await resPost.json();
 
-        const resComments = await fetch(`http://localhost:3001/comments/post/${id}`);
+        const resComments = await fetch(`http://localhost:3000/comments/post/${id}`);
         const commentsData = await resComments.json();
 
         postData.comments = commentsData

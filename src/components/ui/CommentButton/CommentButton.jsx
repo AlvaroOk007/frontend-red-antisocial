@@ -2,7 +2,6 @@
 import { MessageCircle } from 'lucide-react';
 
 export function CommentButton({publication, setComment, comment}) {
-  console.log(publication,setComment,comment)
   return (
     <div
       onClick={() => setComment(!comment)}

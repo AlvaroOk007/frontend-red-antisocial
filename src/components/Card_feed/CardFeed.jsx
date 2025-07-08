@@ -19,15 +19,15 @@ export function CardFeed({ publication, updateUsers, publications }) {
           </div>
         </div>
         <div className='card_feed-username'>
-          <Link to={`/user/${publication.User.id}`}>{publication.User.nickName}</Link>
-          <p>{publication.updatedAt.split('T')[0]}</p>
+          <Link to={`/user/${publication.user?.id}`}>{publication.user?.nickName}</Link>
+          <p>{publication.publicationDate.split('T')[0]}</p>
         </div>
       </div>
       <div className='container_decription_card_feed'>
         <div className='card_feed-description'>
           <p className='card_feed-description-text'>{publication.description}</p>
         </div>
-        {publication.images.length > 0 && <CarrouselImages images={publication.images} />}
+        {publication.Images.length > 0 && <CarrouselImages images={publication.Images} />}
       </div>
       <div className='conteiner-card_feed-footer'>
         <div className='conteiner-card_feed-footer-icons-left'>

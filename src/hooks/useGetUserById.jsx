@@ -8,7 +8,7 @@ export const useGetUserById = (id) => {
 
     const fetchUser = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/users/${id}`);
+        const res = await fetch(`http://localhost:3000/users/${id}`);
         const data = await res.json();
         setUser(data);
       } catch (error) {
