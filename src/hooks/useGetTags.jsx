@@ -8,7 +8,7 @@ export function useGetTags() {
     useEffect(() => {
         async function fetchTags() {
         try {
-            const response = await fetch('http://localhost:3001/tags'); // URL del backend para obtener tags
+            const response = await fetch('http://localhost:3000/tags'); // URL del backend para obtener tags
             if (!response.ok) throw new Error('Error al cargar los tags');
             const data = await response.json();
             setTags(data);

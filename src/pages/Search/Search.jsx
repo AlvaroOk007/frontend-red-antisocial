@@ -24,8 +24,7 @@ export default function Search(){
             return; 
         }
         const postsFiltered = publications?.filter(p =>
-            p.description.toLowerCase().startsWith(text) || 
-            p.Tags.some(t => t.name.toLowerCase().startsWith(text)) 
+            p.description.toLowerCase().startsWith(text) || p.Tags.some(t => t.name.toLowerCase().startsWith(text)) 
         );
         const usersFiltered = users.filter( u => u.nickName.toLowerCase().startsWith(text));
         setUsersSearched(usersFiltered)
